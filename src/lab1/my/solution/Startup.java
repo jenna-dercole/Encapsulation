@@ -1,7 +1,5 @@
 package lab1.my.solution;
 
-import java.util.Scanner;
-
 /**
  * In this lab your challenge is to fix the code in both classes to use
  * proper encapsulation and the other best practices as explained by 
@@ -31,19 +29,8 @@ public class Startup {
 //        employee.reviewDeptPolicies();
 //
 //        System.out.println("The employee's status is: " + employee.getStatus());
-            Scanner sc = new Scanner(System.in);
             HRManager hr = new HRManager();
-            Employee e = new Employee();
-            System.out.println("What is the employee's first name?");
-            e.setFirstName(sc.nextLine());
-            System.out.println("What is the employee's last name?");
-            e.setLastName(sc.nextLine());
-            System.out.println("What is the employee's SSN?");
-            e.setSsn(sc.nextLine());
-            System.out.println("What is the employee's birthdate?");
-            e.setBirthDate(sc.nextLine());
-            
-            hr.orientEmployee(e);
+            hr.hireEmployee("John", "Smith", "5253");
     }
     
     

@@ -15,8 +15,17 @@ public class Employee {
     private String lastName;
     private String ssn;
     private String birthDate;
+    private Date currentDate;
     
+    public Employee() {
+        currentDate = new Date();
+    }
     
+    public Employee(String firstName, String lastName, String ssn) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.ssn = ssn;
+    }
 
     public String getFirstName() {
         return firstName;

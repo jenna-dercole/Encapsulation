@@ -13,18 +13,26 @@ import java.util.Date;
  */
 public class HRManager {
         private Date currentDate;
+        private String cubeId;
         private boolean metWithHr;
         private boolean metDeptStaff;
         private boolean reviewedDeptPolicies;
         private boolean movedIn;
-        private String cubeId;
-                
+        
+        public void hireEmployee(String firstName, String lastName, String ssn) {
+            Employee e = new Employee();
+            e.setFirstName(firstName);
+            e.setLastName(lastName);
+            e.setSsn(ssn);
+            orientEmployee(e);
+        }
+        
         public void orientEmployee(Employee e) {
-            this.meetWithHrForBenefitAndSalryInfo();
-            this.meetDepartmentStaff();
-            this.reviewDeptPolicies();
-            this.moveIntoCubicle(cubeId);
-            this.getStatus();
+            meetWithHrForBenefitAndSalryInfo();
+            meetDepartmentStaff();
+            reviewDeptPolicies();
+            moveIntoCubicle(cubeId);
+            getStatus();
         }
         
         private String getStatus() {
